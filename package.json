@@ -22,6 +22,8 @@
     "postcss-cli": "^6.1.3"
   },
   "dependencies": {
-    "waypoints": "^4.0.1"
+    "waypoints": "^4.0.1",
+    "minimist": "1.2.5",
+    "kind-of": "^6.0.5"
   }
 }

@@ -11,6 +11,8 @@ $(document).ready(() => {
         offset: "55px"
     });
 
+    // test
+
     // Scroll on buttons
     $(".js--scroll-to-reserve").click(function () {
         $("html, body").animate({ scrollTop: $(".js--section-reserve").offset().top }, 1500);

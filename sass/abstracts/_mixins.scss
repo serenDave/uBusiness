@@ -1,0 +1,16 @@
+// LAYOUT
+@mixin centerElement {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// CLIP-PATH
+@mixin triangularSliceBottom {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+@mixin triangularSliceTop {
+    clip-path: polygon(0 0, 100% 0, 50% 10%);
+}

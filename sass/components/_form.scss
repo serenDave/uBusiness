@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+
+    & > * {
+        border: none;
+        background-color: var(--background-primary-color-dark);
+        padding: 2rem 3rem;
+        font-family: inherit;
+        color: inherit;
+        border-radius: 5px;
+        
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+    }
+
+    &__submit {
+        background-color: var(--dark-primary-color);
+        color: var(--primary-text-color-light);
+        font-size: 2rem;
+        cursor: pointer;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: var(--darker-primary-color);
+        }
+    }
+}

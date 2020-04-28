@@ -1,0 +1,106 @@
+.header {
+    height: 100vh;
+    position: relative;
+    background-image: 
+        var(--darken-backcolor),
+        url(../img/city-skyline.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    &__text-box {
+        @include centerElement;
+        width: 80%;
+    }
+
+    &__small-text {
+        display: block;
+        color: var(--primary-text-color-light);
+        font-size: 2rem;
+        letter-spacing: .5rem;
+
+        animation: moveFromTop 1s ease-in;
+    }
+}
+
+.navigation {
+    height: 15%;
+    background-image: linear-gradient(
+            rgba(0, 0, 0, .7),
+            rgba(0, 0, 0, .7));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    transition: all .4s;
+    
+    &__logo, &__logo--black {
+        margin-left: 13rem;
+    }
+    &__logo {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    &__logo--black {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    &__logo--black {
+        display: none;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: row-reverse;
+
+        animation: appearance 1s ease-out; 
+    }
+
+    &__item {
+        margin-right: 4rem; 
+    }
+
+    &__link {
+        padding-bottom: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: var(--primary-text-color-light);
+        border-bottom: 2px solid transparent;
+        transition: border-bottom .3s;
+
+        &:hover {
+            border-bottom: 2px solid var(--dark-primary-color);
+        }
+    }
+
+    // STICKY NAV
+    &--sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8%;
+        background-image: none;
+        background-color: var(--background-primary-color);
+        box-shadow: 0 5px 3px rgba(0, 0, 0, .15);
+        z-index: 100;
+
+        & .navigation__link {
+           color: var(--primary-text-color);
+        }
+
+        & .navigation__logo {
+            display: none;
+        }
+
+        & .navigation__logo--black {
+            display: block;
+        }
+    }
+}
+

@@ -1,0 +1,8 @@
+.row {
+    max-width: var(--row-width);
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: var(--gutter-vertical);
+    }
+}

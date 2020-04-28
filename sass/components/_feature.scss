@@ -1,0 +1,15 @@
+.feature {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
+
+    &__text {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

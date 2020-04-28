@@ -1,0 +1,30 @@
+.icon-big {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: 0 auto; 
+    margin-bottom: 2rem;
+
+    &--blue {
+        color: var(--default-primary-color);
+    }
+}
+
+.icon-small {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.5rem;
+
+    &--orange {
+        color: var(--secondary-color);
+    }
+
+    &--blue {
+        color: var(--darker-primary-color-1);
+        transition: color .2s;
+
+        &:hover {
+            color: var(--primary-text-color-light);
+        }
+    }
+}
+

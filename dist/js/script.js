@@ -1,5 +1,24 @@
 $(document).ready(() => {
 
+    // Mobile navigation
+    $("#open-menu").click(() => {
+        $(".navigation__list").css("width", "30rem");
+        $(".navigation__list").css("padding", "0 3rem");
+        $(".navigation__list").css("paddingTop", "8rem");
+        setTimeout(() => {
+            $(".navigation__list > *").css("visibility", "visible");
+            $(".navigation__list > *").css("opacity", "0.9");
+        }, 300);
+
+    });
+
+    $("#close-menu").click(() => {
+        $(".navigation__list").css("width", 0);
+        $(".navigation__list").css("padding", 0);
+        $(".navigation__list > *").css("visibility", "hidden");
+        $(".navigation__list > *").css("opacity", "0");
+    });
+
     // Sticky navigation
     $(".js--section-about").waypoint(function (direction) {
         if (direction == "down") {
@@ -10,8 +29,6 @@ $(document).ready(() => {
     }, {
         offset: "55px"
     });
-
-    // test
 
     // Scroll on buttons
     $(".js--scroll-to-reserve").click(function () {

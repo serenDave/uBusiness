@@ -1,6 +1,10 @@
 .form {
     display: flex;
 
+    @media(max-width: 900px) {
+        flex-direction: column;
+    }
+
     & > * {
         border: none;
         background-color: var(--background-primary-color-dark);
@@ -8,9 +12,19 @@
         font-family: inherit;
         color: inherit;
         border-radius: 5px;
+
+        @media(max-width: 900px) {
+            width: 30rem;
+            margin: 0 auto;
+        }
         
         &:not(:last-child) {
             margin-right: 2.5rem;
+
+            @media(max-width: 900px) {
+                margin-right: auto;
+                margin-bottom: 2.5rem;
+            }
         }
     }
 

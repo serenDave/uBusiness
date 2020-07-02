@@ -15,6 +15,14 @@ body {
     margin-top: 1rem;
 
     animation: moveFromLeft 1s ease-out;
+
+    @media(max-width: 600px) {
+        font-size: 4rem;
+    }
+
+    @media(max-width: 400px) {
+        letter-spacing: .2rem;
+    }
 }
 
 .heading-secondary {
@@ -27,17 +35,6 @@ body {
     &--white {
         color: var(--primary-text-color-light-2);
     }
-
-    // &::after {
-    //     content: "";
-    //     top: 3rem;
-    //     display: block;
-    //     margin: 0 auto;
-    //     background-color: var(--dark-primary-color);
-    //     height: .3rem;
-    //     width: 30%;
-    //     margin-top: 3rem;
-    // }
 }
 
 .heading-tertiary {

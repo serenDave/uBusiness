@@ -1,9 +1,7 @@
 .header {
     height: 100vh;
     position: relative;
-    background-image: 
-        var(--darken-backcolor),
-        url(../img/city-skyline.jpg);
+    background-image: var(--darken-backcolor), url(../img/city-skyline.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -12,13 +10,20 @@
     &__text-box {
         @include centerElement;
         width: 80%;
+
+        .btn {
+            @media(max-width: 400px) {
+                margin-right: 0 !important;
+                margin-bottom: 2rem;
+            }
+        }
     }
 
     &__small-text {
         display: block;
         color: var(--primary-text-color-light);
         font-size: 2rem;
-        letter-spacing: .5rem;
+        letter-spacing: 0.5rem;
 
         animation: moveFromTop 1s ease-in;
     }
@@ -26,17 +31,16 @@
 
 .navigation {
     height: 15%;
-    background-image: linear-gradient(
-            rgba(0, 0, 0, .7),
-            rgba(0, 0, 0, .7));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    transition: all .4s;
-    
-    &__logo, &__logo--black {
-        margin-left: 13rem;
+    transition: all 0.4s;
+
+    &__logo,
+    &__logo--black {
+        margin-left: 5vw;
     }
     &__logo {
         width: 15rem;
@@ -56,12 +60,48 @@
         list-style: none;
         display: flex;
         flex-direction: row-reverse;
+        animation: appearance 1s ease-out;
 
-        animation: appearance 1s ease-out; 
+        @media (max-width: 700px) {
+            width: 0;
+            flex-direction: column;
+            align-items: flex-end;
+            height: 100%;
+            position: fixed;
+            z-index: 105;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            opacity: 0.9;
+            transition: 0.5s;
+        }
+
+        &--close {
+            display: none;
+            cursor: pointer;
+            color: #fff;
+
+            @media (max-width: 700px) {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 25px;
+                font-size: 36px;
+                margin-right: 50px;
+            }
+        }
     }
 
     &__item {
-        margin-right: 4rem; 
+        margin-right: 4rem;
+
+        @media (max-width: 700px) {
+            margin-right: 0rem;
+            margin-bottom: 4rem;
+            visibility: hidden;
+            opacity: 0;
+        }
     }
 
     &__link {
@@ -71,7 +111,7 @@
         font-size: 2rem;
         color: var(--primary-text-color-light);
         border-bottom: 2px solid transparent;
-        transition: border-bottom .3s;
+        transition: border-bottom 0.3s;
 
         &:hover {
             border-bottom: 2px solid var(--dark-primary-color);
@@ -87,11 +127,18 @@
         height: 8%;
         background-image: none;
         background-color: var(--background-primary-color);
-        box-shadow: 0 5px 3px rgba(0, 0, 0, .15);
+        box-shadow: 0 5px 3px rgba(0, 0, 0, 0.15);
         z-index: 100;
 
+        .icon--menu {
+            color: #111;
+        }
+
         & .navigation__link {
-           color: var(--primary-text-color);
+            @media (min-width: 700px) {
+                color: var(--primary-text-color);
+            }
+
         }
 
         & .navigation__logo {
@@ -103,4 +150,3 @@
         }
     }
 }
-

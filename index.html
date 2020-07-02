@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="dist/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/img/favicon-32x32.png">
+    <link rel="stylesheet" href="dist/css/main.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dotimeout/1.0/jquery.ba-dotimeout.min.js"></script>
     <title>uBusiness Webinar</title>
@@ -15,14 +15,16 @@
 <body>
     <header class="header">
         <nav class="navigation">
-            <img src="img/uBusiness logo.png" alt="logo" class="navigation__logo">
-            <img src="img/uBusiness logo black.png" alt="logo" class="navigation__logo--black">
+            <img src="dist/img/uBusiness logo.png" alt="logo" class="navigation__logo">
+            <img src="dist/img/uBusiness logo black.png" alt="logo" class="navigation__logo--black">
 
             <ul class="navigation__list">
                 <li class="navigation__item"><a href="#" class="navigation__link js--scroll-to-reserve">Как записаться</a></li>
                 <li class="navigation__item"><a href="#" class="navigation__link js--scroll-to-organisers">Организаторы</a></li>
                 <li class="navigation__item"><a href="#" class="navigation__link js--scroll-to-profit">О вебинаре</a></li>
+                <li class="navigation__item navigation__list--close" id="close-menu">&times;</li>
             </ul>
+            <ion-icon name="menu" class="icon icon--menu" id="open-menu"></ion-icon>
         </nav>
     
         <div class="header__text-box">
@@ -217,7 +219,7 @@
 
             <div class="section-organisers__box js--animated">
                 <div class="feature">
-                    <img src="img/person-1.jpg" alt="First person" class="section-organisers__person-photo">
+                    <img src="dist/img/person-1.jpg" alt="First person" class="section-organisers__person-photo">
                     <h3 class="heading-tertiary no-margin-bottom">Александр Новиков</h3>
                     <div class="section-organisers__person-info">IQ менеджер</div>
                     <p class="paragraph">
@@ -225,7 +227,7 @@
                     </p>
                 </div>
                 <div class="feature">
-                    <img src="img/person-2.jpg" alt="Second person" class="section-organisers__person-photo">
+                    <img src="dist/img/person-2.jpg" alt="Second person" class="section-organisers__person-photo">
                     <h3 class="heading-tertiary no-margin-bottom">Роман Шевченко</h3>
                     <div class="section-organisers__person-info">Спикер</div>
                     <p class="paragraph">
@@ -233,7 +235,7 @@
                     </p>
                 </div>
                 <div class="feature">
-                    <img src="img/person-3.jpg" alt="Third person" class="section-organisers__person-photo">
+                    <img src="dist/img/person-3.jpg" alt="Third person" class="section-organisers__person-photo">
                     <h3 class="heading-tertiary no-margin-bottom">Ярослав Павленко</h3>
                     <div class="section-organisers__person-info">uBusiness инвестор</div>
                     <p class="paragraph">
@@ -332,8 +334,8 @@
     </footer>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="dist/js/jquery.waypoints.min.js"></script>
+    <script src="dist/js/script.js"></script>
 
 </body>
 </html>

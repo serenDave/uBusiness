@@ -6,6 +6,10 @@
     &__features {
         display: flex;
         padding: 4rem 0;
+
+        @media(max-width: 900px) {
+            flex-direction: column;
+        }
     }
 
     &__text {
@@ -26,16 +30,20 @@
     background-position: center;
     background-attachment: fixed;
     overflow: hidden;
-
+    height: 55rem;
     margin-top: -14rem;
     position: relative;
     z-index: -1;
+
+    @media(max-width: 900px) {
+        margin-top: -23rem;
+        height: 75rem;
+    }
 
     & > * {
         transform: translate(-50%, -15%);
     }
 
-    height: 55rem;
 }
 
 .section-clients {
@@ -44,6 +52,10 @@
 
     &__features {
         display: flex;
+
+        @media(max-width: 800px) {
+            flex-direction: column;
+        }
     }
 
     @include triangularSliceBottom;
@@ -51,7 +63,6 @@
 
 .section-profit {
     padding: 12.5rem 0 5rem 0;
-    
     margin-top: -10rem;
     background-image: 
     var(--darken-backcolor-1),
@@ -59,6 +70,11 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
+
+    @media(max-width: 800px) {
+        padding-top: 23rem;
+        margin-top: -18rem;
+    }
 
     &__heading {
         font-style: italic; 
@@ -68,6 +84,10 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+
+        @media(max-width: 400px) {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -99,6 +119,10 @@
     @include triangularSliceBottom;
     z-index: 1;
     position: relative;
+
+    @media(max-width: 600px) {
+        padding-bottom: 15rem;
+    }
  
     &__heading {
         font-size: 4rem;
@@ -110,6 +134,10 @@
 
     &__box {
         display: flex;
+
+        @media(max-width: 800px) {
+            flex-direction: column;
+        }
     }
 
     &__person-info {
@@ -149,12 +177,29 @@
     background-size: cover;
     background-position: center;
 
+    @media(max-width: 900px) {
+        margin-top: -15rem;
+        height: 100rem;
+    }
+
+    @media(max-width: 600px) {
+        width: 100%;
+    }
+
     &__box {
         @include centerElement;
         margin-top: 5rem;
         padding: 5rem;
         background-image: var(--darken-backcolor);
         border-radius: 5px;
+
+        @media(max-width: 900px) {
+            width: 70rem;
+        }
+
+        @media(max-width: 600px) {
+            width: 100%;
+        }
     }
 
     &__text-box {
@@ -167,6 +212,10 @@
     &__heading {
         font-size: 4.5rem;
         margin-bottom: 2rem;
+
+        @media(max-width: 600px) {
+            font-size: 3rem;
+        }
     }
 
     &__text {

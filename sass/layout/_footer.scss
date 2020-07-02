@@ -6,6 +6,22 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 8rem;
+
+        @media(max-width: 700px) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__about-us {
+        @media(max-width: 700px) {
+            margin-bottom: 4rem;
+        }
+
+        @media(max-width: 600px) {
+            flex-direction: column;
+        }
     }
 
     &__about-us, &__social-media {
@@ -16,6 +32,10 @@
     &__item, &__media-item {
         &:not(:last-child) {
             margin-right: 2rem;
+
+            @media(max-width: 600px) {
+                margin-right: 1rem;
+            }
         }
     }
 
@@ -33,6 +53,10 @@
         font-size: 1.8rem;
         text-transform: uppercase;
         letter-spacing: .1rem;
+
+        @media(max-width: 600px) {
+            font-size: 1.6rem;
+        }
     }
 
 
